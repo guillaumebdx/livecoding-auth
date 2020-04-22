@@ -32,7 +32,9 @@ class ItemController extends AbstractController
         $itemManager = new ItemManager();
         $items = $itemManager->selectAll();
 
-        return $this->twig->render('Item/index.html.twig', ['items' => $items]);
+        return $this->twig->render('Item/index.html.twig', [
+            'items' => $items,
+        ]);
     }
 
 
